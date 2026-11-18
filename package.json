@@ -1,0 +1,22 @@
+{
+  "name": "prepskm-jee-planner",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run build && node server.js",
+    "build": "esbuild src/widgets.tsx --bundle --outfile=dist/widgets.js --format=iife --target=es2020 --jsx=automatic && node --check server.js",
+    "start": "node server.js",
+    "lint": "tsc --noEmit && node --check server.js"
+  },
+  "dependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.28.2",
+    "express": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.11.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
